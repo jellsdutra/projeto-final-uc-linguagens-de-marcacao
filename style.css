@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* fundo do site */
+body {
+    background: #111;
+    color: #fff;
+}
+
+/* CABEÇALHO - utilizado block para elemenos irem para direita */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 6%;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 32px;
+}
+
+.logo span {
+    /* (span) usado para estilizar apenas parte do texto */
+    color: red;
+}
+
+.menu a {
+    margin-left: 25px;
+    /*adiciona um espaço de 25px à esquerda de cada elemento */
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Aplicar sombra na class bt, para menu central do cliente */
+.menu .btn-primary {
+    background: rgb(255, 0, 0);
+    padding: 10px 18px;
+    border-radius: 4px;
+}
+
+
+/*  display: flex
+flex-direction
+align itens
+justify content
+flex 1/2/3*/
+
+
+.banner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    border-radius: 25px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.banner-esquerda {
+    width: 50%;
+    padding: 40px;
+}
+
+.banner-esquerda h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+}
+
+.banner-esquerda h1 span {
+    color: #ff1a1a;
+    font-weight: bold;
+}
+
+.banner-esquerda p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #ff0000;
+    padding: 12px 25px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+/* .btn {
+    background: #ff0000;
+} */
+
+.banner-direita {
+    width: 50%;
+    height: 100%;
+}
+
+.banner-direita img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* BENEFICIOS */
+.beneficios {
+    text-align: center;
+    padding: 60px 6%;
+}
+.beneficios h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.beneficios h3 {
+    color: red;
+    margin-bottom: 10px;
+}
+.beneficios-grid {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.benef-item {
+    width: 150px;
+}
+
+
+/*  EXPLIXAÇÃO FIBRA ÓPTICA  */
+
+.vantagens-container {
+    text-align: center; /* Centraliza tudo */
+    padding: 40px 20px;
+    color: #fff; 
+    font-family: Arial, sans-serif;
+}
+
+.vantagens-container h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.vantagens-container ul {
+    list-style: none; /* remove marcadores padrão */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px; /* mantém tudo organizado */
+    text-align: left; /* itens alinhados à esquerda, mas centrados no container */
+}
+
+.vantagens-container li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Pseudo Class  https://symbl.cc*/
+.vantagens-container li::before {
+    content: '\2705';
+    margin-right: 10px;
+    color: #00ff6a; /* verde igual ao da imagem */
+}
+
+/* PLANOS */
+
+
+.planos {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    gap: 20px;
+    width: 90%;
+}
+
+.plano {
+    /* float: left; */
+    background: #222;
+    width: 280px;
+    padding: 35px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.destaque {
+    background: rgb(255, 0, 0);
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #000;
+    padding: 10px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.contato {
+    text-align: center;
+    padding: 80px 6%;
+}
+
+.contato form {
+    max-width: 450px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato input {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+}
