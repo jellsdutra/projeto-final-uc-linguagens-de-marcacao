@@ -4,27 +4,34 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* fundo do site */
+/* fundo de todo o site */
 body {
+    line-height: 1.6;
     background: #111;
-    color: #fff;
+    padding: clamp(10px, 2vw, 40px);
+    /* padding ajusta sozinho */
 }
 
 /* CABEÇALHO - utilizado block para elemenos irem para direita */
 .header {
+    color: #fff;
     display: flex;
     justify-content: space-between;
+    /* ESPAÇAMENTO IGUAL - PRIMEIRO ELEMENTO NO INICIO E SEGUNDO NO FINAL */
     align-items: center;
-    padding: 25px 6%;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+
 }
 
 .logo {
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 800;
-    line-height: 32px;
+    line-height: 42px;
 }
 
 .logo span {
@@ -48,109 +55,143 @@ body {
 }
 
 
-/*  display: flex
+/*  USAR PARA display: flex
 flex-direction
 align itens
 justify content
 flex 1/2/3*/
 
-
+/* BANNER */
 .banner {
+
     width: 100%;
-    max-width: 1200px;
-    margin: 40px auto;
+    height: 380px;
+    background-image: url("imgs/casal2.jpg");
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: #000;
-    border-radius: 25px;
-    overflow: hidden;
+    position: relative;
+    padding-left: 40px;
+    /* distância da esquerda */
+}
+
+/* CAMADA ESCURA SOBRE O BANNER*/
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* TEXTO NO LADO ESQUERDO */
+.banner-text {
+    position: relative;
     color: #fff;
+    max-width: 500px;
+    z-index: 1;
+    text-align: left;
+    /* alinhamento à esquerda */
 }
 
-.banner-esquerda {
-    width: 50%;
-    padding: 40px;
-}
-
-.banner-esquerda h1 {
+.banner-text h1 {
     font-size: 42px;
     line-height: 1.1;
     margin: 0 0 20px 0;
 }
 
-.banner-esquerda h1 span {
+.banner-text p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+.banner-text h1 span {
     color: #ff1a1a;
     font-weight: bold;
 }
 
-.banner-esquerda p {
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
 .btn {
+    display: inline-block;
     background: #ff0000;
     padding: 12px 25px;
     color: #fff;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
-/* .btn {
+.btn {
     background: #ff0000;
-} */
-
-.banner-direita {
-    width: 50%;
-    height: 100%;
-}
-
-.banner-direita img {
-    width: 100%;
-    height: auto;
-    display: block;
 }
 
 
 /* BENEFICIOS */
+
 .beneficios {
+    color: #fff;
     text-align: center;
     padding: 60px 6%;
 }
+
 .beneficios h2 {
-    font-size: 32px;
+    font-size: 42px;
     margin-bottom: 10px;
 }
+
 .beneficios h3 {
     color: red;
     margin-bottom: 10px;
-}
-.beneficios-grid {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.benef-item {
-    width: 150px;
+    font-size: 30px;
 }
 
+.beneficios p {
+    font-size: 28px;
+}
+
+
+/* BENEFICIOS cards */
+
+.beneficios-cards {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+
+.beneficios-grid {
+    padding: clamp(1rem, 3vw, 2rem);
+    border-radius: 12px;
+    text-align: center;
+    max-width: 800px;
+    transition: transform 0.5s;
+    margin: 9px;
+}
+
+.beneficios-grid:hover {
+    transform: translateY(-10px); /*efeito no elemento  */
+}
 
 /*  EXPLIXAÇÃO FIBRA ÓPTICA  */
 
 .vantagens-container {
-    text-align: center; /* Centraliza tudo */
+    text-align: center;
+    /* Centraliza tudo */
     padding: 40px 20px;
-    color: #fff; 
+    color: #fff;
     font-family: Arial, sans-serif;
 }
 
 .vantagens-container h2 {
-    font-size: 28px;
+    font-size: 42px;
     margin-bottom: 25px;
+    color: #ff0000;
     font-weight: 700;
 }
 
@@ -158,12 +199,12 @@ flex 1/2/3*/
     list-style: none; /* remove marcadores padrão */
     padding: 0;
     margin: 0 auto;
-    max-width: 800px; /* mantém tudo organizado */
-    text-align: left; /* itens alinhados à esquerda, mas centrados no container */
+    max-width: 1500px;  /* mangem do texto lista */
+    text-align: left;  /* itens alinhados à esquerda, mas centrados no container */
 }
 
 .vantagens-container li {
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -173,57 +214,168 @@ flex 1/2/3*/
 .vantagens-container li::before {
     content: '\2705';
     margin-right: 10px;
-    color: #00ff6a; /* verde igual ao da imagem */
+    color: #00ff6a;
+    /* verde igual ao da imagem */
 }
 
 /* PLANOS */
 
+.titulo-planos {
+    background-color: #ffffff;
+    /* Fundo branco */
+    padding: 40px 20px;
+    text-align: center;
+    border: 2px solid #c5c3c3;
+    /* borda suave */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo-planos h1 {
+    font-size: 28px;
+    color: #000000;
+    font-weight: bold;
+    margin: 0;
+}
 
 .planos {
     display: flex;
+    display: row;
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
-    margin: 50px auto;
-    gap: 20px;
-    width: 90%;
+    padding: 40px 0;
+    gap: 30px;
+    
 }
 
-.plano {
-    /* float: left; */
-    background: #222;
-    width: 280px;
-    padding: 35px 20px;
-    border-radius: 8px;
+/*  CARDS PLANOS */
+
+.card {
+    width: 260px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
     text-align: center;
 }
 
-.destaque {
-    background: rgb(255, 0, 0);
+/* Card central destacado */
+.card.destaque {
+    background: #ff3b30;
+    color: #fff;
+    transform: scale(1.06);
 }
 
-.btn-secondary {
-    background: #fff;
-    color: #000;
-    padding: 10px 18px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 700;
+/* Título (velocidade) */
+.card .velocidade {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff3b30;
 }
+
+.destaque .velocidade {
+    color: #fff;
+}
+
+/* Preço */
+.card .preco {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Texto da lista */
+.card .info {
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+.linha {
+    border-top: 2px dashed #33322e;
+    width: 70%;
+    margin: 8px auto 12px auto;
+}
+
+/* Botão ASSINAR */
+.btn-planos {
+    display: inline-block;
+    margin-top: 10px;
+    background: linear-gradient(to right, #8b0000, #d12b2b);
+    padding: 10px 40px;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* FORMULARIO CONTATO */
 
 .contato {
-    text-align: center;
-    padding: 80px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+
 }
 
-.contato form {
+/* Texto à esquerda */
+.texto {
+    color: #dcdcdc;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
     max-width: 450px;
-    margin: 30px auto;
+}
+
+/* Formulário à direita */
+.formulario {
+    width: 350px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    /* espaço entre os itens internos */
 }
 
-.contato input {
-    padding: 12px;
-    border-radius: 5px;
-    border: none;
+.formulario p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #dcdcdc;
 }
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #999;
+    border-radius: 2px;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* Botão ENVIAR */
+.btn {
+    width: 120px;
+    padding: 10px;
+    background: #ff3b30;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 1rem;
+    color: white;
+    border-radius: 12px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
