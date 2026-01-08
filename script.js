@@ -84,3 +84,6 @@
 // card.addEventListener("click", () => {
 //     return logEventos.innerHTML += "<br><b>Clicou</b>"
 // })
+
+
+alert("Bem vindo ao JD NET")
