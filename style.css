@@ -12,9 +12,19 @@
 body {
     line-height: 1.6;
     background: #111;
+    transition: 0.3s;
     padding: clamp(10px, 2vw, 40px);
     /* padding ajusta sozinho */
 }
+
+/* fundo site tema claro */
+.fundoclaro {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+}
+
+
 
 /* CABEÇALHO - utilizado block para elemenos irem para direita */
 .header {
@@ -132,10 +142,21 @@ flex 1/2/3*/
 
 /* BENEFICIOS */
 
+
 .beneficios {
     color: #fff;
     text-align: center;
     padding: 60px 6%;
+}
+
+.beneficios-planos {
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Fundo branco */
+    padding: 40px 20px;
+    text-align: center;
+    border: 2px solid #c5c3c3;
+    /* borda suave */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .beneficios h2 {

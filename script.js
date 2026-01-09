@@ -55,35 +55,109 @@
 //     } else {
 //         corpo.style.backgroundColor = "black";
 //     }
-// }
-
-
+// }}
 
 
 // const exibirNome = () => {
-//     const texto = document.querySelector("texto")
+//     const texto = document.querySelector("#texto")
 //     const meuNome = document.querySelector("#nome").value
 //     return texto.innerHTML = meuNome;
 // }
 
 // const exibirSenha = () => {
-//     const senha = documento.querySelector("#senha")
-//     //return senha.setAttribute("type", "text")
+//     const senha = document.querySelector("#senha")
+//     // senha.setAttribute("type","text")
 
-//     if (senha.type === "password") {
+//     if(senha.type === "password") {
 //         senha.type = "text"
-//     } else {
+//     }else{
 //         senha.type = "password"
 //     }
+
 // }
 
 // const card = document.querySelector("#card")
 // const logEventos = document.querySelector("#logEventos")
-// card.style.backgroundColor = "green"
+// card.style.backgroundColor =  "green"
 
+// // AO CLICAR
 // card.addEventListener("click", () => {
 //     return logEventos.innerHTML += "<br><b>Clicou</b>"
 // })
 
+// // AO APROXIMAR DO ELEMENTO
+// card.addEventListener("mouseenter", () => {
+//     return logEventos.innerHTML += "<br><b>Você aproximou</b>"
+// })
 
-alert("Bem vindo ao JD NET")
+// // SAIR DO ELEMENTO
+// card.addEventListener("mouseleave", () => {
+//     return logEventos.innerHTML += "<br><b>Você saiu</b>"
+// })
+
+// const limparLog = () => {
+//     logEventos.innerHTML = "Eventos serão exibidos aqui..."
+// }
+
+
+
+alert("Bem vindo ao JD PLAY!!");
+
+// FUNÇÃO TROCAR TEMA CLARO E ESCURO
+const TemaClaro = () => {
+    const corpo = document.body
+    corpo.classList.toggle("fundoclaro");
+};
+
+
+// FUNÇÃO OCULTAR BANNER
+function OcultarBanner() {
+    const banner = document.getElementById("banner");
+
+    if (banner.style.display === "none") {
+        banner.style.display = "block";
+    } else {
+        banner.style.display = "none";
+    }
+}
+
+
+// FUNÇÃO BOTÃO TOPO
+
+function topo() {
+    window.scrollTo({
+        top: 0,
+
+    });
+    // const exibirNome = () => {
+    //     const texto = document.querySelector("#texto")
+    //     const meuNome = document.querySelector("#nome").value
+    //     return texto.innerHTML = meuNome;
+    // }
+
+    // FORMULÁRIO DE CONTATO - VALIDAÇÃO SIMPLES
+
+    const form = document.getElementById("formContato");
+    const mensagem = document.getElementById("mensagem");
+    // Adiciona um ouvinte de evento para o envio do formulário
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        // Obtém os valores dos campos do formulário
+        const nome = document.getElementById("nome").value;
+        const telefone = document.getElementById("telefone").value;
+        const endereco = document.getElementById("endereco").value;
+
+        if (nome === "" || telefone === "" || endereco === "") {
+            return mensagem.innerText = "X-X Preencher todos os campos!";
+
+        } else {
+            return mensagem.innerText = "Dados enviados com sucesso! ✓";
+        }
+    });
+}
+
+// MUDAR TEMA FUNDO QUANDO PASSAR MOUSE
+const beneficios = document.querySelector("#beneficios")
+// const logEventos = document.querySelector("#logEventos")

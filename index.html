@@ -9,9 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+
     <!--   Cabeçalho do site -->
     <header class="header">
         <div class="logo">JD <span>NET</span></div> <!-- (span) inline usado para estilizar apenas parte do texto. -->
@@ -25,20 +27,28 @@
         </nav>
     </header>
     <!-- BANER INICIAL SITE -->
-    <div class="banner">
-        <div class="banner-text">
-            <h1>INTER<span>NET</span> DE VERDADE</h1>
-            <p>Combinamos Ultra Velocidade e Estabilidade para garantir que sua experiência de conexão seja imparável.
-            </p>
-            <a href="#" class="btn">Saiba mais</a>
+    <button onclick="TemaClaro()"> TEMA</button>
+    <button onclick="OcultarBanner()">Banner</button>
+    <section id="banner">
+        <div class="banner">
+            <div class="banner-text">
+                <h1>INTER<span>NET</span> DE VERDADE</h1>
+                <p>Combinamos Ultra Velocidade e Estabilidade para garantir que sua experiência de conexão seja
+                    imparável.
+                </p>
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
         </div>
-    </div>
+    </section>
     <!-- BENEFÍCIOS -->
     <section class="beneficios">
         <h2>BENEFÍCIOS</h2>
         <h3>Roteador Wi-Fi grátis!</h3>
-        <p>Ao escolher um plano com velocidade igual ou superior a 100mbps, você leva de brinde o roteador Wi-Fi, para
-            navegar a vontade, seja na sua TV, notebook ou smartphone!</p>
+        <div class="beneficios-planos">
+            <p>Ao escolher um plano com velocidade igual ou superior a 100mbps, você leva de brinde o roteador Wi-Fi,
+                para
+                navegar a vontade, seja na sua TV, notebook ou smartphone!</p>
+        </div>
     </section>
     <section class="beneficios-cards">
         <div class="beneficios-grid">
@@ -131,22 +141,25 @@
                 Contrate sem sair de casa<br>
                 Nós entramos em contato com você!
             </div>
-            <form class="formulario">
+            <form class="formulario" id="formContato">
                 <div>
                     <p>NOME</p>
-                    <input type="text" name="nome">
+                    <input type="text" id="nome">
                 </div>
+
                 <div>
                     <p>TELEFONE</p>
-                    <input type="text" name="telefone">
+                    <input type="text" id="telefone">
                 </div>
 
                 <div>
                     <p>ENDEREÇO</p>
-                    <input type="text" name="endereco">
+                    <input type="text" id="endereco">
                 </div>
 
-                <button class="btn">ENVIAR</button>
+                <p id="mensagem"></p>
+
+                <button class="btn" type="submit">ENVIAR</button>
             </form>
         </div>
     </div>
@@ -155,7 +168,7 @@
         <p>&copy; 2025 Jefferson Dutra - Todos os direitos reservados</p>
     </footer>
 
-
+    <button onclick="topo()">Topo</button>
     <script src="script.js"></script>
 </body>
 
