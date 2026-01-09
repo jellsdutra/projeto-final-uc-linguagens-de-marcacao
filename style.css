@@ -19,25 +19,23 @@ body {
 
 /* fundo site tema claro */
 body.fundoclaro .header {
-    background: white;
+    background: rgb(226, 221, 221);
     color: black;
 }
 
 
 body.fundoclaro {
-    background: #f4f4f4;
+    background: #fff;
     color: #111;
 }
 
 body.fundoclaro .beneficios-planos,
+.vantagens-texto,
 .beneficios-grid {
-    background: #636060;
+    background: #d4d4d4;
 }
 
-body.fundoclaro .btn,
-.beneficios-planos .beneficios,
-.beneficios h2,
-.beneficios p .beneficios h3 body.fundoclaro .btn-planos {
+body.fundoclaro .btn .beneficios-planos p .beneficios .beneficios h2 .vantagens-container h2 .vantagens-container li .beneficios-cards .beneficios p .beneficios h3 .btn-planos {
     color: black;
 }
 
@@ -275,6 +273,16 @@ flex 1/2/3*/
 
 /*  EXPLIXAÇÃO FIBRA ÓPTICA  */
 
+.vantagens-texto {
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Fundo branco */
+    padding: 40px 20px;
+    text-align: center;
+    border: 2px solid #c5c3c3;
+    /* borda suave */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .vantagens-container {
     text-align: center;
     /* Centraliza tudo */
@@ -292,6 +300,7 @@ flex 1/2/3*/
 
 .vantagens-container ul {
     list-style: none;
+    color: #fff;
     /* remove marcadores padrão */
     padding: 0;
     margin: 0 auto;
