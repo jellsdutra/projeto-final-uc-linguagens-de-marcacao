@@ -127,13 +127,14 @@ function OcultarBanner() {
 function topo() {
     window.scrollTo({
         top: 0,
-
     });
     // const exibirNome = () => {
     //     const texto = document.querySelector("#texto")
     //     const meuNome = document.querySelector("#nome").value
     //     return texto.innerHTML = meuNome;
     // }
+
+
 
     // FORMULÁRIO DE CONTATO - VALIDAÇÃO SIMPLES
 

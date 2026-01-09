@@ -18,10 +18,27 @@ body {
 }
 
 /* fundo site tema claro */
-.fundoclaro {
-    background-color: #ffffff;
-    color: #000000;
-    transition: 0.3s;
+body.fundoclaro .header {
+    background: white;
+    color: black;
+}
+
+
+body.fundoclaro {
+    background: #f4f4f4;
+    color: #111;
+}
+
+body.fundoclaro .beneficios-planos,
+.beneficios-grid {
+    background: #636060;
+}
+
+body.fundoclaro .btn,
+.beneficios-planos .beneficios,
+.beneficios h2,
+.beneficios p .beneficios h3 body.fundoclaro .btn-planos {
+    color: black;
 }
 
 
@@ -178,12 +195,11 @@ flex 1/2/3*/
 /* BENEFICIOS cards */
 .beneficios-cards {
     color: #fff;
-
     display: flex;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
-    /* 🔑 permite quebrar linha */
+    /* permite quebrar linha */
 
     gap: 20px;
     /* espaço entre os cards */
@@ -193,7 +209,7 @@ flex 1/2/3*/
 /* CARD */
 .beneficios-grid {
     flex: 1 1 200px;
-    /* 🔑 largura flexível */
+    /* largura flexível */
     max-width: 250px;
 
     padding: 20px;
